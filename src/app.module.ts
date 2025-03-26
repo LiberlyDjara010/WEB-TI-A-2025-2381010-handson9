@@ -22,7 +22,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
           username: configService.get<string>('POSTGRES_USER'),
           database: configService.get<string>('POSTGRES_DATABASE'),
           migrations: ['dist/migrations/*.js'],
-          entities: [__dirname + '/**/*.entity{.ts,.js)'],
+          entities: [__dirname + '/**/*.entity{.ts,.js}'],
           autoLoadEntities: true,
           ssl: true
       }),
